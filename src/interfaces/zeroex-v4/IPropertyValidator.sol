@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity >=0.8.9;
+
+pragma solidity ^0.8.10;
 
 interface IPropertyValidator {
     /// @dev Checks that the given ERC721/ERC1155 asset satisfies the properties encoded in `propertyData`.
