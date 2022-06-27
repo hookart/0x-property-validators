@@ -3,8 +3,6 @@ pragma solidity ^0.8.9;
 
 import "forge-std/Test.sol";
 import "openzeppelin-contracts/utils/Counters.sol";
-// import {IHookCallOption} from "../src/interfaces/IHookCallOption.sol";
-// import {IPropertyValidator} from "../src/interfaces/zeroex-v4/IPropertyValidator.sol";
 import {HookCallOption} from "../src/HookCallOption.sol";
 import {PropertyValidator, Types} from "../src/PropertyValidator.sol";
 
