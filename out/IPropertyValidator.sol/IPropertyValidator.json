@@ -39,19 +39,19 @@
   },
   "ast": {
     "absolutePath": "src/interfaces/zeroex-v4/IPropertyValidator.sol",
-    "id": 205,
+    "id": 21316,
     "exportedSymbols": {
       "IPropertyValidator": [
-        204
+        21315
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "39:631:3",
+    "src": "39:631:10",
     "nodes": [
       {
-        "id": 193,
+        "id": 21304,
         "nodeType": "PragmaDirective",
-        "src": "39:24:3",
+        "src": "39:24:10",
         "literals": [
           "solidity",
           ">=",
@@ -60,18 +60,18 @@
         ]
       },
       {
-        "id": 204,
+        "id": 21315,
         "nodeType": "ContractDefinition",
-        "src": "65:604:3",
+        "src": "65:604:10",
         "nodes": [
           {
-            "id": 203,
+            "id": 21314,
             "nodeType": "FunctionDefinition",
-            "src": "529:138:3",
+            "src": "529:138:10",
             "documentation": {
-              "id": 194,
+              "id": 21305,
               "nodeType": "StructuredDocumentation",
-              "src": "100:424:3",
+              "src": "100:424:10",
               "text": "@dev Checks that the given ERC721/ERC1155 asset satisfies the properties encoded in `propertyData`.\n      Should revert if the asset does not satisfy the specified properties.\n @param tokenAddress The ERC721/ERC1155 token contract address.\n @param tokenId The ERC721/ERC1155 tokenId of the asset to check.\n @param propertyData Encoded properties or auxiliary data needed to perform the check."
             },
             "functionSelector": "1395c0f3",
@@ -79,20 +79,20 @@
             "kind": "function",
             "modifiers": [],
             "name": "validateProperty",
-            "nameLocation": "538:16:3",
+            "nameLocation": "538:16:10",
             "parameters": {
-              "id": 201,
+              "id": 21312,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 196,
+                  "id": 21307,
                   "mutability": "mutable",
                   "name": "tokenAddress",
-                  "nameLocation": "572:12:3",
+                  "nameLocation": "572:12:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 203,
-                  "src": "564:20:3",
+                  "scope": 21314,
+                  "src": "564:20:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -100,10 +100,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 195,
+                    "id": 21306,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "564:7:3",
+                    "src": "564:7:10",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -114,13 +114,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 198,
+                  "id": 21309,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "602:7:3",
+                  "nameLocation": "602:7:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 203,
-                  "src": "594:15:3",
+                  "scope": 21314,
+                  "src": "594:15:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -128,10 +128,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 197,
+                    "id": 21308,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "594:7:3",
+                    "src": "594:7:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -141,13 +141,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 200,
+                  "id": 21311,
                   "mutability": "mutable",
                   "name": "propertyData",
-                  "nameLocation": "634:12:3",
+                  "nameLocation": "634:12:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 203,
-                  "src": "619:27:3",
+                  "scope": 21314,
+                  "src": "619:27:10",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -155,10 +155,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 199,
+                    "id": 21310,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "619:5:3",
+                    "src": "619:5:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -167,15 +167,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "554:98:3"
+              "src": "554:98:10"
             },
             "returnParameters": {
-              "id": 202,
+              "id": 21313,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "666:0:3"
+              "src": "666:0:10"
             },
-            "scope": 204,
+            "scope": 21315,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -188,15 +188,15 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          204
+          21315
         ],
         "name": "IPropertyValidator",
-        "nameLocation": "75:18:3",
-        "scope": 205,
+        "nameLocation": "75:18:10",
+        "scope": 21316,
         "usedErrors": []
       }
     ],
     "license": "UNLICENSED"
   },
-  "id": 3
+  "id": 10
 }

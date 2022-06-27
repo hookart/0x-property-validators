@@ -257,9 +257,47 @@
         }
       }
     },
+    "lib/openzeppelin-contracts/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1656349545041,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Counters": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "Counters.sol/Counters.json"
+        }
+      }
+    },
     "src/HookCallOption.sol": {
-      "lastModificationDate": 1656338727072,
-      "contentHash": "16e807a7b453f9765f2c5a6eb2316cee",
+      "lastModificationDate": 1656359792347,
+      "contentHash": "ed32e750dc41f6318de845ef21e0f3da",
       "sourceName": "src/HookCallOption.sol",
       "solcConfig": {
         "settings": {
@@ -288,6 +326,13 @@
         }
       },
       "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
         "src/interfaces/IHookCallOption.sol"
       ],
       "versionRequirement": ">=0.8.9",
@@ -298,8 +343,8 @@
       }
     },
     "src/PropertyValidator.sol": {
-      "lastModificationDate": 1656337761079,
-      "contentHash": "0bb61f67ab7e106660387c46c31b4cc0",
+      "lastModificationDate": 1656359803874,
+      "contentHash": "0dc61a2950145b52e8c86674b59ca356",
       "sourceName": "src/PropertyValidator.sol",
       "solcConfig": {
         "settings": {
@@ -328,6 +373,14 @@
         }
       },
       "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+        "src/HookCallOption.sol",
         "src/interfaces/IHookCallOption.sol",
         "src/interfaces/zeroex-v4/IPropertyValidator.sol"
       ],
@@ -335,12 +388,15 @@
       "artifacts": {
         "PropertyValidator": {
           "0.8.15+commit.e14f2714.Darwin.appleclang": "PropertyValidator.sol/PropertyValidator.json"
+        },
+        "Types": {
+          "0.8.15+commit.e14f2714.Darwin.appleclang": "PropertyValidator.sol/Types.json"
         }
       }
     },
     "src/interfaces/IHookCallOption.sol": {
-      "lastModificationDate": 1656337754304,
-      "contentHash": "f7becc261f0649ddbf12cbfb8f8b6b60",
+      "lastModificationDate": 1656359798528,
+      "contentHash": "f14fc3b83449178a89f9f5c5310a8eb6",
       "sourceName": "src/interfaces/IHookCallOption.sol",
       "solcConfig": {
         "settings": {
@@ -377,7 +433,7 @@
       }
     },
     "src/interfaces/zeroex-v4/IPropertyValidator.sol": {
-      "lastModificationDate": 1656104220827,
+      "lastModificationDate": 1656359811444,
       "contentHash": "94f324f17f8dfce02cde9d74e7cc2bd2",
       "sourceName": "src/interfaces/zeroex-v4/IPropertyValidator.sol",
       "solcConfig": {
@@ -415,8 +471,8 @@
       }
     },
     "test/PropertyValidatorTests.t.sol": {
-      "lastModificationDate": 1656342549404,
-      "contentHash": "5605351fc8be89da3a85756f82c81732",
+      "lastModificationDate": 1656361156144,
+      "contentHash": "8c095e1c677f1e72338d2f4d24e8b134",
       "sourceName": "test/PropertyValidatorTests.t.sol",
       "solcConfig": {
         "settings": {
@@ -450,7 +506,12 @@
         "lib/forge-std/src/Test.sol",
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol"
+        "lib/forge-std/src/console2.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Counters.sol",
+        "src/HookCallOption.sol",
+        "src/PropertyValidator.sol",
+        "src/interfaces/IHookCallOption.sol",
+        "src/interfaces/zeroex-v4/IPropertyValidator.sol"
       ],
       "versionRequirement": "^0.8.9",
       "artifacts": {

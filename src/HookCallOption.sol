@@ -2,10 +2,11 @@
 
 pragma solidity >=0.8.9;
 
-import "@openzeppelin/contracts/utils/Counters.sol";
+import "openzeppelin-contracts/utils/Counters.sol";
+import "forge-std/Test.sol";
 import {IHookCallOption} from "./interfaces/IHookCallOption.sol";
 
-contract HookCallOption is IHookCallOption {
+contract HookCallOption is IHookCallOption, Test {
     using Counters for Counters.Counter;
 
     struct CallOption {
@@ -53,7 +54,7 @@ contract HookCallOption is IHookCallOption {
         optionParams[newOptionId] = CallOption({
             writer: tokenAddress,
             vaultAddress: address(0),
-            assetId: tokenId,
+            assetId: uint32(tokenId),
             strike: strikePrice,
             expiration: expirationTime,
             bid: 0,
