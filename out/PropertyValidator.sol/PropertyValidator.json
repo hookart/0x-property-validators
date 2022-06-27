@@ -1,0 +1,1612 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "propertyData",
+          "type": "bytes"
+        }
+      ],
+      "name": "validateProperty",
+      "outputs": [],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610404806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80631395c0f314610030575b600080fd5b61004361003e3660046102b0565b610045565b005b600080808061005685870187610359565b6040516311edb68160e11b8152600481018c90529397509195509350915088906100d6906001600160a01b038316906323db6d0290602401602060405180830381865afa1580156100ab573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100cf919061039f565b8686610155565b60405163a05b775f60e01b81526004810189905261014a906001600160a01b0383169063a05b775f90602401602060405180830381865afa15801561011f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610143919061039f565b8484610155565b505050505050505050565b6003816003811115610169576101696103b8565b036101be578183146101b95760405162461bcd60e51b81526020600482015260146024820152731d985b1d595cc8185c99481b9bdd08195c5d585b60621b60448201526064015b60405180910390fd5b505050565b60018160038111156101d2576101d26103b8565b0361023757818311156101b95760405162461bcd60e51b815260206004820152602760248201527f61637475616c2076616c7565206973206e6f74203c3d20636f6d70617269736f6044820152666e2076616c756560c81b60648201526084016101b0565b600281600381111561024b5761024b6103b8565b036101b957818310156101b95760405162461bcd60e51b815260206004820152602760248201527f61637475616c2076616c7565206973206e6f74203e3d20636f6d70617269736f6044820152666e2076616c756560c81b60648201526084016101b0565b600080600080606085870312156102c657600080fd5b84356001600160a01b03811681146102dd57600080fd5b935060208501359250604085013567ffffffffffffffff8082111561030157600080fd5b818701915087601f83011261031557600080fd5b81358181111561032457600080fd5b88602082850101111561033657600080fd5b95989497505060200194505050565b80356004811061035457600080fd5b919050565b6000806000806080858703121561036f57600080fd5b8435935061037f60208601610345565b92506040850135915061039460608601610345565b905092959194509250565b6000602082840312156103b157600080fd5b5051919050565b634e487b7160e01b600052602160045260246000fdfea26469706673582212200eeb243626b52387204636fee2d0a0833f7251ad7d5bf46a062c5b9463fc543264736f6c634300080f0033",
+    "sourceMap": "208:1499:1:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80631395c0f314610030575b600080fd5b61004361003e3660046102b0565b610045565b005b600080808061005685870187610359565b6040516311edb68160e11b8152600481018c90529397509195509350915088906100d6906001600160a01b038316906323db6d0290602401602060405180830381865afa1580156100ab573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100cf919061039f565b8686610155565b60405163a05b775f60e01b81526004810189905261014a906001600160a01b0383169063a05b775f90602401602060405180830381865afa15801561011f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610143919061039f565b8484610155565b505050505050505050565b6003816003811115610169576101696103b8565b036101be578183146101b95760405162461bcd60e51b81526020600482015260146024820152731d985b1d595cc8185c99481b9bdd08195c5d585b60621b60448201526064015b60405180910390fd5b505050565b60018160038111156101d2576101d26103b8565b0361023757818311156101b95760405162461bcd60e51b815260206004820152602760248201527f61637475616c2076616c7565206973206e6f74203c3d20636f6d70617269736f6044820152666e2076616c756560c81b60648201526084016101b0565b600281600381111561024b5761024b6103b8565b036101b957818310156101b95760405162461bcd60e51b815260206004820152602760248201527f61637475616c2076616c7565206973206e6f74203e3d20636f6d70617269736f6044820152666e2076616c756560c81b60648201526084016101b0565b600080600080606085870312156102c657600080fd5b84356001600160a01b03811681146102dd57600080fd5b935060208501359250604085013567ffffffffffffffff8082111561030157600080fd5b818701915087601f83011261031557600080fd5b81358181111561032457600080fd5b88602082850101111561033657600080fd5b95989497505060200194505050565b80356004811061035457600080fd5b919050565b6000806000806080858703121561036f57600080fd5b8435935061037f60208601610345565b92506040850135915061039460608601610345565b905092959194509250565b6000602082840312156103b157600080fd5b5051919050565b634e487b7160e01b600052602160045260246000fdfea26469706673582212200eeb243626b52387204636fee2d0a0833f7251ad7d5bf46a062c5b9463fc543264736f6c634300080f0033",
+    "sourceMap": "208:1499:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;378:678;;;;;;:::i;:::-;;:::i;:::-;;;549:19;;;;692:66;;;;703:12;692:66;:::i;:::-;861:38;;-1:-1:-1;;;861:38:1;;;;;1593:25:4;;;535:223:1;;-1:-1:-1;535:223:1;;-1:-1:-1;535:223:1;-1:-1:-1;535:223:1;-1:-1:-1;817:12:1;;840:128;;-1:-1:-1;;;;;861:29:1;;;;;1566:18:4;;861:38:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;913:11;938:20;840:7;:128::i;:::-;986:37;;-1:-1:-1;;;986:37:1;;;;;1593:25:4;;;978:71:1;;-1:-1:-1;;;;;986:28:1;;;;;1566:18:4;;986:37:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1025:6;1033:15;978:7;:71::i;:::-;525:531;;;;;378:678;;;;:::o;1062:643::-;1208:15;1195:9;:28;;;;;;;;:::i;:::-;;1191:508;;1257:11;1247:6;:21;1239:54;;;;-1:-1:-1;;;1239:54:1;;2152:2:4;1239:54:1;;;2134:21:4;2191:2;2171:18;;;2164:30;-1:-1:-1;;;2210:18:4;;;2203:50;2270:18;;1239:54:1;;;;;;;;;1062:643;;;:::o;1191:508::-;1327:27;1314:9;:40;;;;;;;;:::i;:::-;;1310:389;;1405:11;1395:6;:21;;1370:119;;;;-1:-1:-1;;;1370:119:1;;2501:2:4;1370:119:1;;;2483:21:4;2540:2;2520:18;;;2513:30;2579:34;2559:18;;;2552:62;-1:-1:-1;;;2630:18:4;;;2623:37;2677:19;;1370:119:1;2299:403:4;1310:389:1;1523:30;1510:9;:43;;;;;;;;:::i;:::-;;1506:193;;1604:11;1594:6;:21;;1569:119;;;;-1:-1:-1;;;1569:119:1;;2909:2:4;1569:119:1;;;2891:21:4;2948:2;2928:18;;;2921:30;2987:34;2967:18;;;2960:62;-1:-1:-1;;;3038:18:4;;;3031:37;3085:19;;1569:119:1;2707:403:4;14:833;102:6;110;118;126;179:2;167:9;158:7;154:23;150:32;147:52;;;195:1;192;185:12;147:52;221:23;;-1:-1:-1;;;;;273:31:4;;263:42;;253:70;;319:1;316;309:12;253:70;342:5;-1:-1:-1;394:2:4;379:18;;366:32;;-1:-1:-1;449:2:4;434:18;;421:32;472:18;502:14;;;499:34;;;529:1;526;519:12;499:34;567:6;556:9;552:22;542:32;;612:7;605:4;601:2;597:13;593:27;583:55;;634:1;631;624:12;583:55;674:2;661:16;700:2;692:6;689:14;686:34;;;716:1;713;706:12;686:34;761:7;756:2;747:6;743:2;739:15;735:24;732:37;729:57;;;782:1;779;772:12;729:57;14:833;;;;-1:-1:-1;;813:2:4;805:11;;-1:-1:-1;;;14:833:4:o;852:150::-;927:20;;976:1;966:12;;956:40;;992:1;989;982:12;956:40;852:150;;;:::o;1007:435::-;1117:6;1125;1133;1141;1194:3;1182:9;1173:7;1169:23;1165:33;1162:53;;;1211:1;1208;1201:12;1162:53;1247:9;1234:23;1224:33;;1276:45;1317:2;1306:9;1302:18;1276:45;:::i;:::-;1266:55;;1368:2;1357:9;1353:18;1340:32;1330:42;;1391:45;1432:2;1421:9;1417:18;1391:45;:::i;:::-;1381:55;;1007:435;;;;;;;:::o;1629:184::-;1699:6;1752:2;1740:9;1731:7;1727:23;1723:32;1720:52;;;1768:1;1765;1758:12;1720:52;-1:-1:-1;1791:16:4;;1629:184;-1:-1:-1;1629:184:4:o;1818:127::-;1879:10;1874:3;1870:20;1867:1;1860:31;1910:4;1907:1;1900:15;1934:4;1931:1;1924:15",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "validateProperty(address,uint256,bytes)": "1395c0f3"
+  },
+  "ast": {
+    "absolutePath": "src/PropertyValidator.sol",
+    "id": 173,
+    "exportedSymbols": {
+      "IHookCallOption": [
+        191
+      ],
+      "IPropertyValidator": [
+        204
+      ],
+      "PropertyValidator": [
+        172
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:1675:1",
+    "nodes": [
+      {
+        "id": 52,
+        "nodeType": "PragmaDirective",
+        "src": "33:24:1",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 54,
+        "nodeType": "ImportDirective",
+        "src": "59:81:1",
+        "absolutePath": "src/interfaces/zeroex-v4/IPropertyValidator.sol",
+        "file": "./interfaces/zeroex-v4/IPropertyValidator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 173,
+        "sourceUnit": 205,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 53,
+              "name": "IPropertyValidator",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 204,
+              "src": "67:18:1",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 56,
+        "nodeType": "ImportDirective",
+        "src": "141:65:1",
+        "absolutePath": "src/interfaces/IHookCallOption.sol",
+        "file": "./interfaces/IHookCallOption.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 173,
+        "sourceUnit": 192,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 55,
+              "name": "IHookCallOption",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 191,
+              "src": "149:15:1",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 172,
+        "nodeType": "ContractDefinition",
+        "src": "208:1499:1",
+        "nodes": [
+          {
+            "id": 63,
+            "nodeType": "EnumDefinition",
+            "src": "263:109:1",
+            "canonicalName": "PropertyValidator.Operation",
+            "members": [
+              {
+                "id": 59,
+                "name": "Ignore",
+                "nameLocation": "288:6:1",
+                "nodeType": "EnumValue",
+                "src": "288:6:1"
+              },
+              {
+                "id": 60,
+                "name": "LessThanOrEqualTo",
+                "nameLocation": "304:17:1",
+                "nodeType": "EnumValue",
+                "src": "304:17:1"
+              },
+              {
+                "id": 61,
+                "name": "GreaterThanOrEqualTo",
+                "nameLocation": "331:20:1",
+                "nodeType": "EnumValue",
+                "src": "331:20:1"
+              },
+              {
+                "id": 62,
+                "name": "Equal",
+                "nameLocation": "361:5:1",
+                "nodeType": "EnumValue",
+                "src": "361:5:1"
+              }
+            ],
+            "name": "Operation",
+            "nameLocation": "268:9:1"
+          },
+          {
+            "id": 121,
+            "nodeType": "FunctionDefinition",
+            "src": "378:678:1",
+            "body": {
+              "id": 120,
+              "nodeType": "Block",
+              "src": "525:531:1",
+              "statements": [
+                {
+                  "assignments": [
+                    74,
+                    77,
+                    79,
+                    82
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 74,
+                      "mutability": "mutable",
+                      "name": "strikePrice",
+                      "nameLocation": "557:11:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 120,
+                      "src": "549:19:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 73,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "549:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 77,
+                      "mutability": "mutable",
+                      "name": "strikePriceOperation",
+                      "nameLocation": "592:20:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 120,
+                      "src": "582:30:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Operation_$63",
+                        "typeString": "enum PropertyValidator.Operation"
+                      },
+                      "typeName": {
+                        "id": 76,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 75,
+                          "name": "Operation",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 63,
+                          "src": "582:9:1"
+                        },
+                        "referencedDeclaration": 63,
+                        "src": "582:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 79,
+                      "mutability": "mutable",
+                      "name": "expiry",
+                      "nameLocation": "634:6:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 120,
+                      "src": "626:14:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 78,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "626:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    },
+                    {
+                      "constant": false,
+                      "id": 82,
+                      "mutability": "mutable",
+                      "name": "expiryOperation",
+                      "nameLocation": "664:15:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 120,
+                      "src": "654:25:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Operation_$63",
+                        "typeString": "enum PropertyValidator.Operation"
+                      },
+                      "typeName": {
+                        "id": 81,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 80,
+                          "name": "Operation",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 63,
+                          "src": "654:9:1"
+                        },
+                        "referencedDeclaration": 63,
+                        "src": "654:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 94,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 85,
+                        "name": "propertyData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 69,
+                        "src": "703:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      },
+                      {
+                        "components": [
+                          {
+                            "id": 87,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "718:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": {
+                              "id": 86,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "718:7:1",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          {
+                            "id": 88,
+                            "name": "Operation",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "727:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_Operation_$63_$",
+                              "typeString": "type(enum PropertyValidator.Operation)"
+                            }
+                          },
+                          {
+                            "id": 90,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "738:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": {
+                              "id": 89,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "738:7:1",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          {
+                            "id": 91,
+                            "name": "Operation",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "747:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_Operation_$63_$",
+                              "typeString": "type(enum PropertyValidator.Operation)"
+                            }
+                          }
+                        ],
+                        "id": 92,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "717:40:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_tuple$_t_type$_t_uint256_$_$_t_type$_t_enum$_Operation_$63_$_$_t_type$_t_uint256_$_$_t_type$_t_enum$_Operation_$63_$_$",
+                          "typeString": "tuple(type(uint256),type(enum PropertyValidator.Operation),type(uint256),type(enum PropertyValidator.Operation))"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        },
+                        {
+                          "typeIdentifier": "t_tuple$_t_type$_t_uint256_$_$_t_type$_t_enum$_Operation_$63_$_$_t_type$_t_uint256_$_$_t_type$_t_enum$_Operation_$63_$_$",
+                          "typeString": "tuple(type(uint256),type(enum PropertyValidator.Operation),type(uint256),type(enum PropertyValidator.Operation))"
+                        }
+                      ],
+                      "expression": {
+                        "id": 83,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "692:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 84,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "decode",
+                      "nodeType": "MemberAccess",
+                      "src": "692:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 93,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "692:66:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_enum$_Operation_$63_$_t_uint256_$_t_enum$_Operation_$63_$",
+                      "typeString": "tuple(uint256,enum PropertyValidator.Operation,uint256,enum PropertyValidator.Operation)"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "535:223:1"
+                },
+                {
+                  "assignments": [
+                    97
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 97,
+                      "mutability": "mutable",
+                      "name": "optionContract",
+                      "nameLocation": "784:14:1",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 120,
+                      "src": "768:30:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IHookCallOption_$191",
+                        "typeString": "contract IHookCallOption"
+                      },
+                      "typeName": {
+                        "id": 96,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 95,
+                          "name": "IHookCallOption",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 191,
+                          "src": "768:15:1"
+                        },
+                        "referencedDeclaration": 191,
+                        "src": "768:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IHookCallOption_$191",
+                          "typeString": "contract IHookCallOption"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 101,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 99,
+                        "name": "tokenAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 65,
+                        "src": "817:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 98,
+                      "name": "IHookCallOption",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 191,
+                      "src": "801:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_IHookCallOption_$191_$",
+                        "typeString": "type(contract IHookCallOption)"
+                      }
+                    },
+                    "id": 100,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "801:29:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IHookCallOption_$191",
+                      "typeString": "contract IHookCallOption"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "768:62:1"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 105,
+                            "name": "tokenId",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 67,
+                            "src": "891:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 103,
+                            "name": "optionContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 97,
+                            "src": "861:14:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IHookCallOption_$191",
+                              "typeString": "contract IHookCallOption"
+                            }
+                          },
+                          "id": 104,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "getStrikePrice",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 182,
+                          "src": "861:29:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function (uint256) view external returns (uint256)"
+                          }
+                        },
+                        "id": 106,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "861:38:1",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 107,
+                        "name": "strikePrice",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 74,
+                        "src": "913:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 108,
+                        "name": "strikePriceOperation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 77,
+                        "src": "938:20:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        }
+                      ],
+                      "id": 102,
+                      "name": "compare",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 171,
+                      "src": "840:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_enum$_Operation_$63_$returns$__$",
+                        "typeString": "function (uint256,uint256,enum PropertyValidator.Operation) pure"
+                      }
+                    },
+                    "id": 109,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "840:128:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 110,
+                  "nodeType": "ExpressionStatement",
+                  "src": "840:128:1"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 114,
+                            "name": "tokenId",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 67,
+                            "src": "1015:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 112,
+                            "name": "optionContract",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 97,
+                            "src": "986:14:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IHookCallOption_$191",
+                              "typeString": "contract IHookCallOption"
+                            }
+                          },
+                          "id": 113,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "getExpiration",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 190,
+                          "src": "986:28:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function (uint256) view external returns (uint256)"
+                          }
+                        },
+                        "id": 115,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "986:37:1",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 116,
+                        "name": "expiry",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 79,
+                        "src": "1025:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 117,
+                        "name": "expiryOperation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 82,
+                        "src": "1033:15:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        }
+                      ],
+                      "id": 111,
+                      "name": "compare",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 171,
+                      "src": "978:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_enum$_Operation_$63_$returns$__$",
+                        "typeString": "function (uint256,uint256,enum PropertyValidator.Operation) pure"
+                      }
+                    },
+                    "id": 118,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "978:71:1",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 119,
+                  "nodeType": "ExpressionStatement",
+                  "src": "978:71:1"
+                }
+              ]
+            },
+            "baseFunctions": [
+              203
+            ],
+            "functionSelector": "1395c0f3",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "validateProperty",
+            "nameLocation": "387:16:1",
+            "overrides": {
+              "id": 71,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "516:8:1"
+            },
+            "parameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 65,
+                  "mutability": "mutable",
+                  "name": "tokenAddress",
+                  "nameLocation": "421:12:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "413:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 64,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "413:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 67,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "451:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "443:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 66,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "443:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 69,
+                  "mutability": "mutable",
+                  "name": "propertyData",
+                  "nameLocation": "483:12:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "468:27:1",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "468:5:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "403:98:1"
+            },
+            "returnParameters": {
+              "id": 72,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "525:0:1"
+            },
+            "scope": 172,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 171,
+            "nodeType": "FunctionDefinition",
+            "src": "1062:643:1",
+            "body": {
+              "id": 170,
+              "nodeType": "Block",
+              "src": "1181:524:1",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_Operation_$63",
+                      "typeString": "enum PropertyValidator.Operation"
+                    },
+                    "id": 134,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 131,
+                      "name": "operation",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 128,
+                      "src": "1195:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Operation_$63",
+                        "typeString": "enum PropertyValidator.Operation"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 132,
+                        "name": "Operation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 63,
+                        "src": "1208:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Operation_$63_$",
+                          "typeString": "type(enum PropertyValidator.Operation)"
+                        }
+                      },
+                      "id": 133,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Equal",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 62,
+                      "src": "1208:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Operation_$63",
+                        "typeString": "enum PropertyValidator.Operation"
+                      }
+                    },
+                    "src": "1195:28:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "condition": {
+                      "commonType": {
+                        "typeIdentifier": "t_enum$_Operation_$63",
+                        "typeString": "enum PropertyValidator.Operation"
+                      },
+                      "id": 146,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 143,
+                        "name": "operation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 128,
+                        "src": "1314:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "expression": {
+                          "id": 144,
+                          "name": "Operation",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 63,
+                          "src": "1327:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_enum$_Operation_$63_$",
+                            "typeString": "type(enum PropertyValidator.Operation)"
+                          }
+                        },
+                        "id": 145,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberName": "LessThanOrEqualTo",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 60,
+                        "src": "1327:27:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        }
+                      },
+                      "src": "1314:40:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseBody": {
+                      "condition": {
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_Operation_$63",
+                          "typeString": "enum PropertyValidator.Operation"
+                        },
+                        "id": 158,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 155,
+                          "name": "operation",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 128,
+                          "src": "1510:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Operation_$63",
+                            "typeString": "enum PropertyValidator.Operation"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "expression": {
+                            "id": 156,
+                            "name": "Operation",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "1523:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_Operation_$63_$",
+                              "typeString": "type(enum PropertyValidator.Operation)"
+                            }
+                          },
+                          "id": 157,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "GreaterThanOrEqualTo",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 61,
+                          "src": "1523:30:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Operation_$63",
+                            "typeString": "enum PropertyValidator.Operation"
+                          }
+                        },
+                        "src": "1510:43:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "id": 167,
+                      "nodeType": "IfStatement",
+                      "src": "1506:193:1",
+                      "trueBody": {
+                        "id": 166,
+                        "nodeType": "Block",
+                        "src": "1555:144:1",
+                        "statements": [
+                          {
+                            "expression": {
+                              "arguments": [
+                                {
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "id": 162,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "leftExpression": {
+                                    "id": 160,
+                                    "name": "actual",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 123,
+                                    "src": "1594:6:1",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": ">=",
+                                  "rightExpression": {
+                                    "id": 161,
+                                    "name": "comparingTo",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 125,
+                                    "src": "1604:11:1",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "src": "1594:21:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_bool",
+                                    "typeString": "bool"
+                                  }
+                                },
+                                {
+                                  "hexValue": "61637475616c2076616c7565206973206e6f74203e3d20636f6d70617269736f6e2076616c7565",
+                                  "id": 163,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "1633:41:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_cbd6cffa819edea1b4d103c28ad90ece1f604286c4bd84689d94d9c1d619860d",
+                                    "typeString": "literal_string \"actual value is not >= comparison value\""
+                                  },
+                                  "value": "actual value is not >= comparison value"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_bool",
+                                    "typeString": "bool"
+                                  },
+                                  {
+                                    "typeIdentifier": "t_stringliteral_cbd6cffa819edea1b4d103c28ad90ece1f604286c4bd84689d94d9c1d619860d",
+                                    "typeString": "literal_string \"actual value is not >= comparison value\""
+                                  }
+                                ],
+                                "id": 159,
+                                "name": "require",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [
+                                  -18,
+                                  -18
+                                ],
+                                "referencedDeclaration": -18,
+                                "src": "1569:7:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                                  "typeString": "function (bool,string memory) pure"
+                                }
+                              },
+                              "id": 164,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1569:119:1",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_tuple$__$",
+                                "typeString": "tuple()"
+                              }
+                            },
+                            "id": 165,
+                            "nodeType": "ExpressionStatement",
+                            "src": "1569:119:1"
+                          }
+                        ]
+                      }
+                    },
+                    "id": 168,
+                    "nodeType": "IfStatement",
+                    "src": "1310:389:1",
+                    "trueBody": {
+                      "id": 154,
+                      "nodeType": "Block",
+                      "src": "1356:144:1",
+                      "statements": [
+                        {
+                          "expression": {
+                            "arguments": [
+                              {
+                                "commonType": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                "id": 150,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "leftExpression": {
+                                  "id": 148,
+                                  "name": "actual",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 123,
+                                  "src": "1395:6:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "nodeType": "BinaryOperation",
+                                "operator": "<=",
+                                "rightExpression": {
+                                  "id": 149,
+                                  "name": "comparingTo",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 125,
+                                  "src": "1405:11:1",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "src": "1395:21:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              },
+                              {
+                                "hexValue": "61637475616c2076616c7565206973206e6f74203c3d20636f6d70617269736f6e2076616c7565",
+                                "id": 151,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "string",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "1434:41:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_stringliteral_2b80e5a6fec3e736395957dfa81e5c5eb892ccc221c60944d7651587dbf48f96",
+                                  "typeString": "literal_string \"actual value is not <= comparison value\""
+                                },
+                                "value": "actual value is not <= comparison value"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_2b80e5a6fec3e736395957dfa81e5c5eb892ccc221c60944d7651587dbf48f96",
+                                  "typeString": "literal_string \"actual value is not <= comparison value\""
+                                }
+                              ],
+                              "id": 147,
+                              "name": "require",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [
+                                -18,
+                                -18
+                              ],
+                              "referencedDeclaration": -18,
+                              "src": "1370:7:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                                "typeString": "function (bool,string memory) pure"
+                              }
+                            },
+                            "id": 152,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1370:119:1",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_tuple$__$",
+                              "typeString": "tuple()"
+                            }
+                          },
+                          "id": 153,
+                          "nodeType": "ExpressionStatement",
+                          "src": "1370:119:1"
+                        }
+                      ]
+                    }
+                  },
+                  "id": 169,
+                  "nodeType": "IfStatement",
+                  "src": "1191:508:1",
+                  "trueBody": {
+                    "id": 142,
+                    "nodeType": "Block",
+                    "src": "1225:79:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "id": 138,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "leftExpression": {
+                                "id": 136,
+                                "name": "actual",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 123,
+                                "src": "1247:6:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "BinaryOperation",
+                              "operator": "==",
+                              "rightExpression": {
+                                "id": 137,
+                                "name": "comparingTo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 125,
+                                "src": "1257:11:1",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "src": "1247:21:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              }
+                            },
+                            {
+                              "hexValue": "76616c75657320617265206e6f7420657175616c",
+                              "id": 139,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1270:22:1",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_1b946b928d41aada5cefc4833bc7419a4a0fe7ef4f0dd425a1ab681e561e96ed",
+                                "typeString": "literal_string \"values are not equal\""
+                              },
+                              "value": "values are not equal"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              {
+                                "typeIdentifier": "t_stringliteral_1b946b928d41aada5cefc4833bc7419a4a0fe7ef4f0dd425a1ab681e561e96ed",
+                                "typeString": "literal_string \"values are not equal\""
+                              }
+                            ],
+                            "id": 135,
+                            "name": "require",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              -18,
+                              -18
+                            ],
+                            "referencedDeclaration": -18,
+                            "src": "1239:7:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (bool,string memory) pure"
+                            }
+                          },
+                          "id": 140,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1239:54:1",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 141,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1239:54:1"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "compare",
+            "nameLocation": "1071:7:1",
+            "parameters": {
+              "id": 129,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 123,
+                  "mutability": "mutable",
+                  "name": "actual",
+                  "nameLocation": "1096:6:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 171,
+                  "src": "1088:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 122,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1088:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 125,
+                  "mutability": "mutable",
+                  "name": "comparingTo",
+                  "nameLocation": "1120:11:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 171,
+                  "src": "1112:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 124,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1112:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 128,
+                  "mutability": "mutable",
+                  "name": "operation",
+                  "nameLocation": "1151:9:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 171,
+                  "src": "1141:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Operation_$63",
+                    "typeString": "enum PropertyValidator.Operation"
+                  },
+                  "typeName": {
+                    "id": 127,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 126,
+                      "name": "Operation",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 63,
+                      "src": "1141:9:1"
+                    },
+                    "referencedDeclaration": 63,
+                    "src": "1141:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Operation_$63",
+                      "typeString": "enum PropertyValidator.Operation"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1078:88:1"
+            },
+            "returnParameters": {
+              "id": 130,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1181:0:1"
+            },
+            "scope": 172,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 57,
+              "name": "IPropertyValidator",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 204,
+              "src": "238:18:1"
+            },
+            "id": 58,
+            "nodeType": "InheritanceSpecifier",
+            "src": "238:18:1"
+          }
+        ],
+        "canonicalName": "PropertyValidator",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          172,
+          204
+        ],
+        "name": "PropertyValidator",
+        "nameLocation": "217:17:1",
+        "scope": 173,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 1
+}
