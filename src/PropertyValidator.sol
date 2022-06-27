@@ -33,17 +33,13 @@ contract PropertyValidator is IPropertyValidator {
 
         IHookCallOption optionContract = IHookCallOption(tokenAddress);
 
-        require(
-            100 == optionContract.getStrikePrice(tokenId),
-            "strike prices should be equal"
+        compare(
+            optionContract.getStrikePrice(tokenId),
+            strikePrice,
+            strikePriceOperation
         );
 
-        // compare(
-        //     optionContract.getStrikePrice(tokenId),
-        //     strikePrice,
-        //     strikePriceOperation
-        // );
-        // compare(optionContract.getExpiration(tokenId), expiry, expiryOperation);
+        compare(optionContract.getExpiration(tokenId), expiry, expiryOperation);
     }
 
     function compare(
