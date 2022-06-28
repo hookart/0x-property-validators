@@ -67,6 +67,24 @@ contract PropertyValidatorTests is Test {
         );
     }
 
+    function testStrikePriceValidationNotEqual() public {
+        comparisonStrikePrice = 0;
+
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.Equal,
+            comparisonExpiry,
+            Types.Operation.Ignore
+        );
+
+        vm.expectRevert("values are not equal");
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
     function testStrikePriceValidationLessThan() public {
         comparisonStrikePrice = 101;
 
@@ -84,6 +102,24 @@ contract PropertyValidatorTests is Test {
         );
     }
 
+    function testStrikePriceValidationNotLessThan() public {
+        comparisonStrikePrice = 0;
+
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.LessThanOrEqualTo,
+            comparisonExpiry,
+            Types.Operation.Ignore
+        );
+
+        vm.expectRevert("actual value is not <= comparison value");
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
     function testStrikePriceValidationGreaterThan() public {
         comparisonStrikePrice = 99;
 
@@ -94,6 +130,24 @@ contract PropertyValidatorTests is Test {
             Types.Operation.Ignore
         );
 
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
+    function testStrikePriceValidationNotGreaterThan() public {
+        comparisonStrikePrice = 101;
+
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.GreaterThanOrEqualTo,
+            comparisonExpiry,
+            Types.Operation.Ignore
+        );
+
+        vm.expectRevert("actual value is not >= comparison value");
         propertyValidator.validateProperty(
             address(calls),
             optionId,
@@ -133,6 +187,24 @@ contract PropertyValidatorTests is Test {
         );
     }
 
+    function testExpiryValidationNotEqual() public {
+        comparisonExpiry = optionExpiry + 1 days;
+
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.Ignore,
+            comparisonExpiry,
+            Types.Operation.Equal
+        );
+
+        vm.expectRevert("values are not equal");
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
     function testExpiryValidationLessThan() public {
         comparisonExpiry = optionExpiry + 3 days;
 
@@ -150,6 +222,24 @@ contract PropertyValidatorTests is Test {
         );
     }
 
+    function testExpiryValidationNotLessThan() public {
+        comparisonExpiry = optionExpiry - 1 days;
+
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.Ignore,
+            comparisonExpiry,
+            Types.Operation.LessThanOrEqualTo
+        );
+
+        vm.expectRevert("actual value is not <= comparison value");
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
     function testExpiryValidationGreaterThan() public {
         comparisonExpiry = optionExpiry - 3 days;
 
@@ -160,6 +250,24 @@ contract PropertyValidatorTests is Test {
             Types.Operation.GreaterThanOrEqualTo
         );
 
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
+    function testExpiryValidationNotGreaterThan() public {
+        comparisonExpiry = optionExpiry + 3 days;
+
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.Ignore,
+            comparisonExpiry,
+            Types.Operation.GreaterThanOrEqualTo
+        );
+
+        vm.expectRevert("actual value is not >= comparison value");
         propertyValidator.validateProperty(
             address(calls),
             optionId,
