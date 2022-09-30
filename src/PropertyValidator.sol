@@ -4,7 +4,6 @@ pragma solidity ^0.8.10;
 
 import {IPropertyValidator} from "./interfaces/zeroex-v4/IPropertyValidator.sol";
 import {IHookCallOption} from "./interfaces/IHookCallOption.sol";
-import {HookCallOption} from "../src/HookCallOption.sol";
 
 library Types {
     enum Operation {
