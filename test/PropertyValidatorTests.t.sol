@@ -14,6 +14,7 @@ contract PropertyValidatorTests is Test {
 
     // Option setup values
     uint256 optionId;
+    uint256 optionId2;
     uint256 optionTokenId = 1;
     uint128 optionStrikePrice = 100;
     uint32 optionExpiry = uint32(block.timestamp) + 3 days;
@@ -31,7 +32,16 @@ contract PropertyValidatorTests is Test {
             address(calls),
             optionTokenId,
             optionStrikePrice,
-            optionExpiry
+            optionExpiry,
+            false
+        );
+
+        optionId2 = calls.createOption(
+            address(calls),
+            optionTokenId + 1,
+            optionStrikePrice,
+            optionExpiry,
+            true
         );
     }
 
@@ -67,6 +77,24 @@ contract PropertyValidatorTests is Test {
         propertyValidator.validateProperty(
             address(calls),
             optionId,
+            propertyData
+        );
+    }
+
+    function testStrikePriceValidationSoloVault() public {
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.Ignore,
+            comparisonExpiry,
+            Types.Operation.Ignore,
+            true,
+            20,
+            20
+        );
+
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId2,
             propertyData
         );
     }

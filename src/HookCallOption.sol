@@ -5,6 +5,13 @@ pragma solidity ^0.8.10;
 import "openzeppelin-contracts/utils/Counters.sol";
 import "forge-std/Test.sol";
 import {IHookCallOption} from "./interfaces/IHookCallOption.sol";
+import {IHookVault} from "./interfaces/IHookVault.sol";
+
+contract MockVaultContract is IHookVault {
+    function assetTokenId(uint32 assetId) external view returns (uint256) {
+        return 20;
+    }
+}
 
 contract HookCallOption is IHookCallOption, Test {
     using Counters for Counters.Counter;
@@ -44,17 +51,23 @@ contract HookCallOption is IHookCallOption, Test {
         address tokenAddress,
         uint256 tokenId,
         uint128 strikePrice,
-        uint32 expirationTime
+        uint32 expirationTime,
+        bool solo
     ) external returns (uint256) {
         // generate the next optionId
         _optionIds.increment();
         uint256 newOptionId = _optionIds.current();
 
+        uint32 assetId = uint32(tokenId);
+        if (solo) {
+            assetId = 0;
+        }
+
         // save the option metadata
         optionParams[newOptionId] = CallOption({
             writer: tokenAddress,
-            vaultAddress: address(0),
-            assetId: uint32(tokenId),
+            vaultAddress: address(new MockVaultContract()),
+            assetId: assetId,
             strike: strikePrice,
             expiration: expirationTime,
             bid: 0,
