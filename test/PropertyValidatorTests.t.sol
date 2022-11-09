@@ -40,9 +40,67 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Ignore,
             comparisonExpiry,
-            Types.Operation.Ignore
+            Types.Operation.Ignore,
+            false,
+            0,
+            0
         );
 
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
+    function testStrikePriceValidationRange() public {
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.Ignore,
+            comparisonExpiry,
+            Types.Operation.Ignore,
+            true,
+            0,
+            10
+        );
+
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
+    function testStrikePriceValidationExact() public {
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.Ignore,
+            comparisonExpiry,
+            Types.Operation.Ignore,
+            true,
+            optionTokenId,
+            optionTokenId
+        );
+
+        propertyValidator.validateProperty(
+            address(calls),
+            optionId,
+            propertyData
+        );
+    }
+
+    function testStrikePriceValidationOutOfRange() public {
+        propertyData = propertyValidator.encode(
+            comparisonStrikePrice,
+            Types.Operation.Ignore,
+            comparisonExpiry,
+            Types.Operation.Ignore,
+            true,
+            100,
+            100000
+        );
+
+        vm.expectRevert("tokenId must be above the lower bound");
         propertyValidator.validateProperty(
             address(calls),
             optionId,
@@ -57,7 +115,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Equal,
             comparisonExpiry,
-            Types.Operation.Ignore
+            Types.Operation.Ignore,
+            false,
+            0,
+            0
         );
 
         propertyValidator.validateProperty(
@@ -74,7 +135,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Equal,
             comparisonExpiry,
-            Types.Operation.Ignore
+            Types.Operation.Ignore,
+            false,
+            0,
+            0
         );
 
         vm.expectRevert("values are not equal");
@@ -92,7 +156,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.LessThanOrEqualTo,
             comparisonExpiry,
-            Types.Operation.Ignore
+            Types.Operation.Ignore,
+            false,
+            0,
+            0
         );
 
         propertyValidator.validateProperty(
@@ -109,7 +176,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.LessThanOrEqualTo,
             comparisonExpiry,
-            Types.Operation.Ignore
+            Types.Operation.Ignore,
+            false,
+            0,
+            0
         );
 
         vm.expectRevert("actual value is not <= comparison value");
@@ -127,7 +197,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.GreaterThanOrEqualTo,
             comparisonExpiry,
-            Types.Operation.Ignore
+            Types.Operation.Ignore,
+            false,
+            0,
+            0
         );
 
         propertyValidator.validateProperty(
@@ -144,7 +217,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.GreaterThanOrEqualTo,
             comparisonExpiry,
-            Types.Operation.Ignore
+            Types.Operation.Ignore,
+            false,
+            0,
+            0
         );
 
         vm.expectRevert("actual value is not >= comparison value");
@@ -160,7 +236,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Ignore,
             comparisonExpiry,
-            Types.Operation.Ignore
+            Types.Operation.Ignore,
+            false,
+            0,
+            0
         );
 
         propertyValidator.validateProperty(
@@ -177,7 +256,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Ignore,
             comparisonExpiry,
-            Types.Operation.Equal
+            Types.Operation.Equal,
+            false,
+            0,
+            0
         );
 
         propertyValidator.validateProperty(
@@ -194,7 +276,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Ignore,
             comparisonExpiry,
-            Types.Operation.Equal
+            Types.Operation.Equal,
+            false,
+            0,
+            0
         );
 
         vm.expectRevert("values are not equal");
@@ -212,7 +297,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Ignore,
             comparisonExpiry,
-            Types.Operation.LessThanOrEqualTo
+            Types.Operation.LessThanOrEqualTo,
+            false,
+            0,
+            0
         );
 
         propertyValidator.validateProperty(
@@ -229,7 +317,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Ignore,
             comparisonExpiry,
-            Types.Operation.LessThanOrEqualTo
+            Types.Operation.LessThanOrEqualTo,
+            false,
+            0,
+            0
         );
 
         vm.expectRevert("actual value is not <= comparison value");
@@ -247,7 +338,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Ignore,
             comparisonExpiry,
-            Types.Operation.GreaterThanOrEqualTo
+            Types.Operation.GreaterThanOrEqualTo,
+            false,
+            0,
+            0
         );
 
         propertyValidator.validateProperty(
@@ -264,7 +358,10 @@ contract PropertyValidatorTests is Test {
             comparisonStrikePrice,
             Types.Operation.Ignore,
             comparisonExpiry,
-            Types.Operation.GreaterThanOrEqualTo
+            Types.Operation.GreaterThanOrEqualTo,
+            false,
+            0,
+            0
         );
 
         vm.expectRevert("actual value is not >= comparison value");

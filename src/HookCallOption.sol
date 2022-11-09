@@ -64,4 +64,12 @@ contract HookCallOption is IHookCallOption, Test {
 
         return newOptionId;
     }
+
+    function getAssetId(uint256 optionId) external view returns (uint32) {
+        return optionParams[optionId].assetId;
+    }
+
+    function getVaultAddress(uint256 optionId) external view returns (address) {
+        return optionParams[optionId].vaultAddress;
+    }
 }

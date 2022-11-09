@@ -4,6 +4,7 @@ pragma solidity ^0.8.10;
 
 import {IPropertyValidator} from "./interfaces/zeroex-v4/IPropertyValidator.sol";
 import {IHookCallOption} from "./interfaces/IHookCallOption.sol";
+import {IHookVault} from "./interfaces/IHookVault.sol";
 
 library Types {
     enum Operation {
@@ -24,10 +25,21 @@ contract PropertyValidator is IPropertyValidator {
             uint256 strikePrice,
             Types.Operation strikePriceOperation,
             uint256 expiry,
-            Types.Operation expiryOperation
+            Types.Operation expiryOperation,
+            bool withinRange,
+            uint256 tokenIdLow,
+            uint256 tokenIdHigh
         ) = abi.decode(
                 propertyData,
-                (uint256, Types.Operation, uint256, Types.Operation)
+                (
+                    uint256,
+                    Types.Operation,
+                    uint256,
+                    Types.Operation,
+                    bool,
+                    uint256,
+                    uint256
+                )
             );
 
         IHookCallOption optionContract = IHookCallOption(tokenAddress);
@@ -38,7 +50,34 @@ contract PropertyValidator is IPropertyValidator {
             strikePriceOperation
         );
 
+        if (withinRange) {
+            uint32 assetId = optionContract.getAssetId(tokenId);
+            if (assetId > 0) {
+                /// if the assetId is non-zero, we know that this asset is
+                /// within a multivault and we can simply get the data from the call
+                ensureInRange(assetId, tokenIdLow, tokenIdHigh);
+            } else {
+                IHookVault vault = IHookVault(
+                    optionContract.getVaultAddress(tokenId)
+                );
+                ensureInRange(
+                    vault.assetTokenId(assetId),
+                    tokenIdLow,
+                    tokenIdHigh
+                );
+            }
+        }
+
         compare(optionContract.getExpiration(tokenId), expiry, expiryOperation);
+    }
+
+    function ensureInRange(
+        uint256 tokenId,
+        uint256 lowerBound,
+        uint256 upperBound
+    ) internal pure {
+        require(tokenId >= lowerBound, "tokenId must be above the lower bound");
+        require(tokenId <= upperBound, "tokenId must be below the upper bound");
     }
 
     function compare(
@@ -65,14 +104,20 @@ contract PropertyValidator is IPropertyValidator {
         uint256 strikePrice,
         Types.Operation strikePriceOperation,
         uint256 expiry,
-        Types.Operation expiryOperation
+        Types.Operation expiryOperation,
+        bool withinRange,
+        uint256 tokenIdLow,
+        uint256 tokenIdHigh
     ) external pure returns (bytes memory) {
         return
             abi.encode(
                 strikePrice,
                 strikePriceOperation,
                 expiry,
-                expiryOperation
+                expiryOperation,
+                withinRange,
+                tokenIdLow,
+                tokenIdHigh
             );
     }
 }

@@ -16,4 +16,8 @@ interface IHookCallOption {
         uint128 strikePrice,
         uint32 expirationTime
     ) external returns (uint256);
+
+    function getAssetId(uint256 optionId) external view returns (uint32);
+
+    function getVaultAddress(uint256 optionId) external view returns (address);
 }
